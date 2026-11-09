@@ -15,7 +15,8 @@ The workflow integrates multiple samples across experimental conditions (age, se
 - **SCTransform normalization** with batch correction across Visium slides (`Run` variable)  
 - **Dimensional reduction:** PCA and UMAP  
 - **Clustering and annotation** of tissue-specific regions  
-- **Pseudobulk differential expression (DE)** analysis using **MAST** and **DESeq2**  
+- **Pseudobulk differential expression (DE)** analysis using **DESeq2**
+- **Single-cell differential expression (DE)** analysis using **MAST**, accounting for differences in gene detection rates across cells or spatial barcodes.
 - **Aging signature derivation** from principal component loadings associated with age  
 - **Quality control summaries** and **variance decomposition** per tissue type  
 
@@ -46,7 +47,4 @@ These Excel metadata tables are linked to the `.h5` expression matrices in the R
 - **Core packages:**  
   `Seurat`, `sctransform`, `Matrix`, `dplyr`, `ggplot2`, `EnhancedVolcano`, `MAST`, `DESeq2`, `kableExtra`
 
-To install missing dependencies:
 
-```r
-source("install_packages.R")
